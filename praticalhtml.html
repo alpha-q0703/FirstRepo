@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Registration</title>
+    <style>
+        body{
+            
+background: rgba(228, 16, 228, 0.53);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(3.2px);
+-webkit-backdrop-filter: blur(3.2px);
+border: 1px solid rgba(228, 16, 228, 0.63);
+        }
+        div{
+            width: 20%;
+            margin: auto;
+            padding-bottom: 20px;
+            padding-top: 20px;
+            margin-top: 10%;
+            
+        }
+        form{
+            text-align: center;
+            text-align: justify;
+            
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <form>
+            <lable>Username</lable><br>
+            <input type="text" placeholder="Username" id="Uname"><br>
+            <span id="Uerror"></span>
+            <br>
+
+            <lable>Password</lable><br>
+            <input type="password" placeholder="Password" id="Pass"><br>
+            <span id="Perror"></span>
+            <br>
+            
+            <label>Contact</label><br>
+			<input type="tel" id="Conct" placeholder="Phone Number" pattern="[0-9]{5}-[0-9]{5} required"><br>
+            <span id="Cerror"></span>
+            <br>
+            
+            <lable>E-mail</lable><br>
+            <input type="text" placeholder="E-mail" id="Umail"><br>
+            <span id="Eerror"></span>
+            <br>
+            
+            <input type="button" value="Submit">
+        </form>
+    </div>
+</body>
+<script>
+    var U = document.getElementById("Uname");
+    U.onchange = function ()
+    {
+        var UN= U.value;
+        if (UN==="")
+		 {
+          	document.getElementById("Uerror").textContent= "Enter your First name";
+		 }
+		 else if (UN.length<"3" || UN.length>"20")
+		  {
+		  	document.getElementById("Uerror").textContent= "Name shoud be in between 3 to 20";
+		  }
+		 else
+		 {
+		 	document.getElementById("Uerror").textContent= "";
+		 }
+    }
+
+    var U = document.getElementById("Pass");
+    P.onchange = function ()
+    {
+        var PS= P.value;
+        if (PS==="")
+		 {
+          	document.getElementById("Perror").textContent= "Enter your First name";
+		 }
+		 else if (PS.length<"3" || PS.length>"20")
+		  {
+		  	document.getElementById("Perror").textContent= "Name shoud be in between 3 to 20";
+		  }
+		 else
+		 {
+		 	document.getElementById("Perror").textContent= "";
+		 }
+    }
+</script>
+</html>
